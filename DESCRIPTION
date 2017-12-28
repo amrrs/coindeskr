@@ -1,0 +1,10 @@
+Package: coindeskr
+Type: Package
+Title: Access 'CoinDesk' Bitcoin Price Index API in R
+Version: 0.1.0
+Authors@R: person("AbdulMajedRaja","RS", email = "amrrs.data@gmail.com", role = "cre")
+Description: Extract real-time 'Bitcoin' Price details by accessing 'CoinDesk Bitcoin Price Index API' <https://www.coindesk.com/api/> 
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
