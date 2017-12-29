@@ -19,11 +19,11 @@ get_current_price <- function(){
   parsed <- jsonlite::fromJSON(httr::content(response, "text", encoding = "UTF-8"))
 
 
-  if (httr::status_code(resp) != 200) {
+  if (httr::status_code(response) != 200) {
     stop(
       sprintf(
         "Coindesk API request failed [%s]\n%s\n<%s>",
-        httr::status_code(resp),
+        httr::status_code(response),
         parsed$disclaimer
       ),
       call. = FALSE
