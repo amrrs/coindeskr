@@ -20,22 +20,18 @@ Get Current Bitcoin Price:
 
 ``` r
 library(coindeskr)
-get_current_price()
+get_current_price('EUR',F)
 
 #output
-> get_current_price()
-$USD
-[1] 13276.75
-
-$EUR
-[1] 11066.24
-
-$GBP
-[1] 9839.734
-
-attr(,"class")
-[1] "coindesk_api"
-```
+> get_current_price('EUR',F)
+              time.updated           time.updatedISO           time.updateduk
+1 Jan 1, 2018 19:58:00 UTC 2018-01-01T19:58:00+00:00 Jan 1, 2018 at 19:58 GMT
+                                                                                                                                                   disclaimer
+1 This data was produced from the CoinDesk Bitcoin Price Index (USD). Non-USD currency data converted using hourly conversion rate from openexchangerates.org
+  bpi.USD.code bpi.USD.rate  bpi.USD.description bpi.USD.rate_float bpi.EUR.code bpi.EUR.rate bpi.EUR.description
+1          USD  13,266.4225 United States Dollar           13266.42          EUR  11,045.6897                Euro
+  bpi.EUR.rate_float
+1           11045.69```
 
 ## Courtesy
 Powered by [Coindesk](https://www.coindesk.com/api/)
