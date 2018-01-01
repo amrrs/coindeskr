@@ -38,4 +38,4 @@ attr(,"class")
 ```
 
 ## Courtesy
-[Coindesk API](https://www.coindesk.com/api/)
+Powered by [Coindesk](https://www.coindesk.com/api/)

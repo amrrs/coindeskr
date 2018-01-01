@@ -4,10 +4,15 @@
 \alias{get_current_price}
 \title{Extract Bitcoin Price Index from Coindesk API}
 \usage{
-get_current_price()
+get_current_price(currency = "USD", only_price = FALSE)
+}
+\arguments{
+\item{currency}{a valid ISO 4217 currency code supported by coindesk - verify with get_currency_list(), default is USD}
+
+\item{only_price}{a TRUE/FALSE flag to force-return only the bitcoin price filtering other associated info}
 }
 \value{
-structured list of Bitcoin price in different currencies returned from the API call
+dataframe containing Bitcoin Price and other associated info returned from the API call if only_price is FALSE, if TRUE, returns only the numeric value of Bitcoin price in the given currency
 }
 \description{
 Extract Bitcoin Price Index from Coindesk API
