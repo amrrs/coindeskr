@@ -36,3 +36,6 @@ $GBP
 attr(,"class")
 [1] "coindesk_api"
 ```
+
+## Courtesy
+[Coindesk API](https://www.coindesk.com/api/)
