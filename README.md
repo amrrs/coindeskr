@@ -31,7 +31,8 @@ get_current_price('EUR',F)
   bpi.USD.code bpi.USD.rate  bpi.USD.description bpi.USD.rate_float bpi.EUR.code bpi.EUR.rate bpi.EUR.description
 1          USD  13,266.4225 United States Dollar           13266.42          EUR  11,045.6897                Euro
   bpi.EUR.rate_float
-1           11045.69```
+1           11045.69
+```
 
 ## Courtesy
 Powered by [Coindesk](https://www.coindesk.com/api/)
