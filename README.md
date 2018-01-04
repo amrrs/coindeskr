@@ -34,5 +34,21 @@ get_current_price('EUR',F)
 1           11045.69
 ```
 
+Get Historic Bitcoin Price:
+
+``` r
+
+library(coindeskr)
+get_historic_price('USD','2017-03-01','2017-03-03')
+
+#output
+
+> get_historic_price('USD','2017-03-01','2017-03-03')
+              Price
+2017-03-01 1230.016
+2017-03-02 1260.924
+2017-03-03 1290.786
+```
+
 ## Courtesy
 Powered by [Coindesk](https://www.coindesk.com/api/)
