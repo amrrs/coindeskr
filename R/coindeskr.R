@@ -69,3 +69,21 @@ get_currency_list <- function(){
 
         return(currency_list)
 }
+
+#' Extract daily USD Price of Bitcoin for the last 31 days
+#'
+#' @return Dataframe with USD Price as one column and Date as rownames
+#' @examples
+#' get_last31days_price()
+#' @export
+
+get_last31days_price <- function(){
+
+        last31days_price <- jsonlite::fromJSON('https://api.coindesk.com/v1/bpi/historical/close.json')
+
+        last31days_price_df <- data.frame(do.call(rbind,last31days_price$bpi))
+
+        names(last31days_price_df) <- 'Price'
+
+        return(last31days_price_df)
+}
