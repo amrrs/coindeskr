@@ -87,3 +87,51 @@ get_last31days_price <- function(){
 
         return(last31days_price_df)
 }
+
+
+#' Extract historic  Price of Bitcoin for the given time period and given currency
+#' @param currency a valid ISO 4217 currency code supported by coindesk - verify with get_currency_list(), default is USD
+#' @param start start date supplied in the YYYY-MM-DD format, e.g. 2013-09-01 for September 1st, 2013. default is current date - 2
+#' @param end end date supplied in the YYYY-MM-DD format, e.g. 2013-09-01 for September 1st, 2013. default is current date - 1
+#' @return Dataframe with the requested currency Price as one column and Date as rownames
+#' @examples
+#' get_historic_price()
+#' @export
+
+get_historic_price <- function(currency = 'USD', start = Sys.Date()-2, end = Sys.Date()-1){
+
+        #currency check
+
+        currency_list <- get_currency_list()
+
+        if(!(currency %in% currency_list$currency))
+                stop('Error: \n Currency code is not supported, Please check with get_currency_list() \n Did you forget the quote ""')
+
+        #start date check
+
+        sd <- as.Date(start,"%Y-%m-%d")
+        if(class( sd ) == "try-error" || is.na( sd ))
+                stop('Error: \n Start Date is not in the right format YYYY-MM-DD. Please fix!')
+
+
+        #end ate check
+
+        ed <- as.Date(end,"%Y-%m-%d")
+        if(class( ed ) == "try-error" || is.na( ed ))
+                stop('Error: \n Start Date is not in the right format YYYY-MM-DD. Please fix!')
+
+        #start vs end check
+
+        if(as.numeric(as.Date(end,"%Y-%m-%d") - as.Date(start,"%Y-%m-%d")) <= 0)
+                stop('Error: \n start cannot be older/smaller/earlier than end ')
+
+        url <- paste0('https://api.coindesk.com/v1/bpi/historical/close.json','?currency=',currency,'&start=',as.Date(start,"%Y-%m-%d"),'&end=',as.Date(end,"%Y-%m-%d"))
+
+        historic_price <- jsonlite::fromJSON(url)
+
+        historic_price_df <- data.frame(do.call(rbind,historic_price$bpi))
+
+        names(historic_price_df) <- 'Price'
+
+        return(historic_price_df)
+}
