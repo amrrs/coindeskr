@@ -1,6 +1,6 @@
 Package: coindeskr
 Type: Package
-Title: Access 'CoinDesk' Bitcoin price Index API
+Title: Access 'CoinDesk' Bitcoin Price Index API
 Version: 0.1.0
 Date: 2018-01-05
 Authors@R: person("AbdulMajedRaja","RS", email = "amrrs.data@gmail.com", role = c("aut","cre"))
