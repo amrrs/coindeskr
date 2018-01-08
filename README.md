@@ -6,8 +6,13 @@ The goal of coindeskr is to access 'CoinDesk' Bitcoin Price Index API in R
 
 ## Installation
 
-You can install coindeskr from github with:
+You can install `coindeskr` from [CRAN](https://cran.r-project.org/package=coindeskr) with:
 
+``` r
+install.packages('coindeskr')
+```
+
+Or alternatively, You can install the development version of `coindeskr` from github with:
 
 ``` r
 # install.packages("devtools")
