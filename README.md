@@ -1,6 +1,6 @@
 # coindeskr
 
-[![Build Status](https://travis-ci.org/amrrs/coindeskr.svg?branch=master)](https://travis-ci.org/amrrs/coindeskr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/coindeskr)](https://cran.r-project.org/package=coindeskr) [![DOWNLOADSTOTAL](https://cranlogs.r-pkg.org/badges/grand-total/coindeskr)](https://cranlogs.r-pkg.org/badges/grand-total/coindeskr) 
+[![Build Status](https://travis-ci.org/amrrs/coindeskr.svg?branch=master)](https://travis-ci.org/amrrs/coindeskr) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/coindeskr)](https://cran.r-project.org/package=coindeskr) [![DOWNLOADSTOTAL](https://cranlogs.r-pkg.org/badges/grand-total/coindeskr)](https://cranlogs.r-pkg.org/badges/grand-total/coindeskr) [![codecov](https://codecov.io/gh/amrrs/coindeskr/branch/master/graph/badge.svg)](https://codecov.io/gh/amrrs/coindeskr)
 
 The goal of coindeskr is to access 'CoinDesk' Bitcoin Price Index API in R
 
