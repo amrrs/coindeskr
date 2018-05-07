@@ -19,6 +19,10 @@ Or alternatively, You can install the development version of `coindeskr` from gi
 devtools::install_github("amrrs/coindeskr")
 ```
 
+## Note
+
+Please note that, `coindeskr` connects with Coindesk API, hence requires Active Internet Connection for it to work. 
+
 ## Example
 
 Get Current Bitcoin Price:
