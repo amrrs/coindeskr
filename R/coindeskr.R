@@ -5,6 +5,7 @@
 #' @examples
 #' get_current_price()
 #' @export
+#' @importFrom httr RETRY
 
 get_current_price <- function(currency = 'USD', only_price = FALSE){
 
@@ -25,7 +26,13 @@ get_current_price <- function(currency = 'USD', only_price = FALSE){
 
   url <- paste0(coindeskAPI,currency,'.json')
 
-  response <- httr::GET(url)
+  response <- httr::RETRY(
+    verb = "POST"
+    , url = url
+    , terminate_on = c(
+      403, 404
+    )
+  )
 
 
   parsed <- jsonlite::fromJSON(httr::content(response, "text", encoding = "UTF-8"))
