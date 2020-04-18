@@ -5,7 +5,6 @@
 #' @examples
 #' get_current_price()
 #' @export
-#' @importFrom httr RETRY
 
 get_current_price <- function(currency = 'USD', only_price = FALSE){
 
