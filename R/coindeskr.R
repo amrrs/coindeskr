@@ -27,7 +27,7 @@ get_current_price <- function(currency = 'USD', only_price = FALSE){
   url <- paste0(coindeskAPI,currency,'.json')
 
   response <- httr::RETRY(
-    verb = "POST"
+    verb = "GET"
     , url = url
     , terminate_on = c(
       403, 404
